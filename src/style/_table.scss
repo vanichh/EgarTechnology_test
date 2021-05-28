@@ -1,19 +1,20 @@
 .table {
   border-collapse: collapse;
   font-size: 17px;
-}
 
-.table__caption {
-  font-size: 30px;
-  margin: 20px;
-  text-transform: uppercase;
-}
+  &__caption {
+    font-size: 30px;
+    margin: 20px;
+    text-transform: uppercase;
+  }
 
-.table__thead {
-  background-color: #00BF80;
-  color: white;
-  font-size: 20px;
-  border: 1px solid grey;
+  &__thead {
+    background-color: #00BF80;
+    color: white;
+    font-size: 20px;
+    border: 1px solid grey;
+  }
+
 }
 
 th {

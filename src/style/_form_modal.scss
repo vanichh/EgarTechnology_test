@@ -1,0 +1,65 @@
+$size-form: 350px;
+.form-modal {
+  font-size: 17px;
+  position: fixed;
+  z-index: 1;
+  top: calc(50% - (#{$size-form} / 2));
+  left: calc(50% - (#{$size-form} / 2));
+  background: white;
+  width: $size-form;
+  height: $size-form;
+  padding: 20px;
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  box-shadow: 0 0 3px 3px rgba(34, 60, 80, 0.2);
+
+
+  $size-close: 40px;
+  &__close {
+    position: absolute;
+    display: block;
+    border: none;
+    top: 0;
+    right: 0;
+    font-size: $size-close;
+    padding: 0;
+    width: $size-close;
+    height: $size-close;
+    line-height: $size-close;
+    background-color: white;
+    color: black;
+  }
+
+  &__close:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+  }
+
+  &__input {
+    display: block;
+    height: 40px;
+    font-size: 20px;
+    padding: 0px;
+  }
+
+  &__text {
+    text-align: center;
+    margin: 10px;
+  }
+
+  &__submit {
+    display: block;
+    margin-top: 20px;
+    height: 40px;
+    padding: 0px;
+    border-width: 1px;
+  }
+  &__submit:hover {
+    background-color: #00BF80;
+    color: white;
+    transition-duration: .2s;
+  }
+}

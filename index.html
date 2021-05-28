@@ -47,21 +47,20 @@
       </tr>
     </tbody>
   </table>
-  <button class="add-td">Добавить ячейку</button>
+  <button class="button-add-td">Добавить ячейку</button>
   <form class="form-modal">
     <button class='form-modal__close'>×</button>
-    <p class='form-modal__text'>Укажите или введите дату</p>
-    <input class="form-modal__input" type='date'>
-    <p class='form-modal__text'>Введи название инструмента</p>
-    <input class="form-modal__input" tupe='text'>
-    <p class='form-modal__text'>Укажите цену</p>
-    <input class="form-modal__input" type="number">
+    <label for="date" class='form-modal__text'>Укажите или введите дату</label>
+    <input id="date" class="form-modal__input" type='date' required>
+    <label for="name" class='form-modal__text'>Введи название инструмента</label>
+    <input id="name" class="form-modal__input" tupe='text' required>
+    <label for="price" class='form-modal__text'>Укажите цену</label>
+    <input id="price" class=" form-modal__input" type="number" required>
     <input class="form-modal__submit" type="submit">
   </form>
   <div id="chart_div" style="width: 100%; height: 500px"></div>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script src='chart.js'></script>
-  <script src='script.js'></script>
+  <script src='script/chart.js'></script>
+  <script type='module' src='script/script.js'></script>
 </body>
-
 </html>

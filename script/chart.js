@@ -11,6 +11,7 @@ function drawChart() {
     chart: {
       title: 'График изменений роста ценнных бумаг',
     },
+    legend: { position: 'bottom' },
   };
   var chart = new google.charts.Line(chartDiv);
   chart.draw(data, option);

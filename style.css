@@ -1,36 +1,62 @@
-@import url('table.css');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
-
-body {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: stretch;
-  font-family: 'Roboto', sans-serif;
-  padding-left: 200px;
-  padding-right: 200px;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
+.table {
+  border-collapse: collapse;
+  font-size: 17px;
 }
 
-.add-td {
-  height: 50px;
-  font-size: 17px;
-  background-color: white;
+.table__caption {
+  font-size: 30px;
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+.table__thead {
+  background-color: #00BF80;
+  color: white;
+  font-size: 20px;
   border: 1px solid grey;
 }
 
-.add-td:hover,
-.form-modal__submit:hover {
-  background-color: #00BF80;
-  color: white;
-  transition-duration: .2s;
+th {
+  padding: 20px;
+  min-width: 150px;
+  text-align: center;
+}
+
+td {
+  border: 1px solid grey;
+  line-height: 60px;
+  width: 150px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+td:hover {
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+tr::nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+.input-editing {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 17px;
+  box-sizing: border-box;
 }
 
 .form-modal {
   font-size: 17px;
   position: fixed;
   z-index: 1;
-  top: calc(50% - 175px);
-  left: calc(50% - 175px);
+  top: calc(50% - (350px / 2));
+  left: calc(50% - (350px / 2));
   background: white;
   width: 350px;
   height: 350px;
@@ -67,7 +93,6 @@ body {
   display: block;
   height: 40px;
   font-size: 20px;
-  /* margin: 10px; */
   padding: 0px;
 }
 
@@ -83,6 +108,38 @@ body {
   padding: 0px;
   border-width: 1px;
 }
-#chart_div{
+
+.form-modal__submit:hover {
+  background-color: #00BF80;
+  color: white;
+  transition-duration: .2s;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.button-add-td {
+  margin-top: 20px;
+  height: 50px;
+  font-size: 17px;
+  background-color: white;
+  border: 1px solid grey;
+}
+
+.button-add-td:hover {
+  background-color: #00BF80;
+  color: white;
+  transition-duration: .2s;
+}
+
+#chart_div {
   margin-top: 30px;
 }
+/*# sourceMappingURL=style.css.map */

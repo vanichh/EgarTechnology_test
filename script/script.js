@@ -1,5 +1,7 @@
-const table = document.querySelector('table');
-form = document.querySelector('.form-modal');
+import './DragnDrop.js'
+
+const table = document.querySelector('table'),
+  form = document.querySelector('.form-modal');
 
 table.addEventListener('click', editing);
 function editing(event) {
@@ -27,7 +29,7 @@ function editing(event) {
 function applyingСhanges() {
   const td = document.querySelectorAll('.table td');
   td.forEach(elem => {
-    if (elem.lastChild.localName === 'input') {
+    if (elem.lastChild !== null && elem.lastChild.localName === 'input') {
       elem.textContent = elem.lastChild.value;
     }
   });
