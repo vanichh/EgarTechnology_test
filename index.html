@@ -10,14 +10,16 @@
 </head>
 
 <body>
-  <table>
-    <caption>Ценные бумаги</caption>
-    <tbody>
+  <table class="table">
+    <caption class="table__caption">Ценные бумаги</caption>
+    <thead class="table__thead">
       <tr>
         <th>Дата</th>
         <th>Инструмент</th>
         <th>Стоимость</th>
       </tr>
+    </thead>
+    <tbody>
       <tr>
         <td>01.01.2019</td>
         <td>Газпром</td>
@@ -45,7 +47,7 @@
       </tr>
     </tbody>
   </table>
-  <button>Добавить ячейку</button>
+  <button class="add-td">Добавить ячейку</button>
   <form class="form-modal">
     <button class='form-modal__close'>×</button>
     <p class='form-modal__text'>Укажите или введите дату</p>
@@ -56,7 +58,7 @@
     <input class="form-modal__input" type="number">
     <input class="form-modal__submit" type="submit">
   </form>
-  <div id="chart_div"></div>
+  <div id="chart_div" style="width: 100%; height: 500px"></div>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src='chart.js'></script>
   <script src='script.js'></script>

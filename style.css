@@ -1,65 +1,76 @@
+@import url('/table.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap');
+
 body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 200px;
+  padding-right: 200px;
 }
 
-table {
-  border-collapse: collapse;
-  border-radius: 10px;
-  border: 2px solid black;
+.add-td {
+  height: 50px;
+  font-size: 17px;
+  background-color: white;
+  border: 1px solid grey;
 }
 
-th,
-td {
-  border: 1px solid black;
-  padding: 20px;
-  min-width: 150px;
-  text-align: center
+.add-td:hover,
+.form-modal__submit:hover {
+  background-color: #00BF80;
+  color: white;
+  transition-duration: .2s;
 }
 
 .form-modal {
+  font-size: 17px;
   position: fixed;
   z-index: 1;
-  top: calc(50% - 125px);
-  left: calc(50% - 125px);
+  top: calc(50% - 175px);
+  left: calc(50% - 175px);
   background: white;
-  min-width: 250px;
-  min-height: 250px;
+  width: 350px;
+  height: 350px;
   padding: 20px;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
+  box-shadow: 0 0 3px 3px rgba(34, 60, 80, 0.2);
 }
+
 .form-modal__close {
   position: absolute;
   display: block;
   border: none;
   top: 0;
   right: 0;
-  font-size: 25px;
+  font-size: 40px;
   padding: 0;
-  width: 25px;
-  height: 25px;
-  line-height: 25px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   background-color: white;
   color: black;
 }
+
 .form-modal__close:hover {
   background-color: red;
- color: white;
- cursor: pointer;
+  color: white;
+  cursor: pointer;
 }
 
 .form-modal__input {
   display: block;
-  height: 20px;
+  height: 40px;
+  font-size: 20px;
   /* margin: 10px; */
   padding: 0px;
-  flex-grow: 1;
 }
+
 .form-modal__text {
   text-align: center;
   margin: 10px;
@@ -68,7 +79,10 @@ td {
 .form-modal__submit {
   display: block;
   margin-top: 20px;
-  height: 24px;
+  height: 40px;
   padding: 0px;
-  flex-grow: 1;
+  border-width: 1px;
+}
+#chart_div{
+  margin-top: 30px;
 }
