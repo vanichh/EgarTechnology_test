@@ -76,7 +76,8 @@ $main-color: #00BF80;
     margin-top: 20px;
     height: 40px;
     padding: 0px;
-    border-width: 1px;
+    border: 2px solid $main-color;
+    background-color: white;
   }
 
   &__submit:hover {

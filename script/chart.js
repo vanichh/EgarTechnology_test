@@ -12,7 +12,8 @@ const config = {
   type: 'line',
   data,
   options: {
-    aspectRatio: 3,
+    aspectRatio: 1,
+    maintainAspectRatio: false,
     plugins: {
       title: {
         display: true,

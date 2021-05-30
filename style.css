@@ -20,7 +20,6 @@
 
 th {
   padding: 20px;
-  min-width: 150px;
   text-align: center;
   width: 33%;
 }
@@ -138,7 +137,8 @@ tr::nth-child(odd) {
   margin-top: 20px;
   height: 40px;
   padding: 0px;
-  border-width: 1px;
+  border: 2px solid #00BF80;
+  background-color: white;
 }
 
 .form-modal__submit:hover {
@@ -153,8 +153,9 @@ body {
   flex-direction: column;
   align-items: stretch;
   font-family: 'Roboto', sans-serif;
-  padding-left: 200px;
-  padding-right: 200px;
+  padding: 0;
+  padding-left: 10%;
+  padding-right: 10%;
   margin: 0;
 }
 
@@ -174,4 +175,10 @@ body {
 
 #chart_div {
   margin-top: 30px;
+}
+
+@media (max-width: 650px) {
+  body {
+    padding: 0;
+  }
 }
