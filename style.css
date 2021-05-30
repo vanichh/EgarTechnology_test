@@ -2,6 +2,7 @@
 .table {
   border-collapse: collapse;
   font-size: 17px;
+  table-layout: fixed;
 }
 
 .table__caption {
@@ -21,12 +22,13 @@ th {
   padding: 20px;
   min-width: 150px;
   text-align: center;
+  width: 33%;
 }
 
 td {
   border: 1px solid grey;
   line-height: 60px;
-  width: 150px;
+  width: 33%;
   text-align: center;
   padding: 0 20px;
 }
@@ -48,7 +50,19 @@ tr::nth-child(odd) {
   height: 40px;
   text-align: center;
   font-size: 17px;
+  border: none;
+  border-bottom: 2px solid #00BF80;
   box-sizing: border-box;
+  background-color: transparent;
+}
+
+.input-editing:hover {
+  outline: none;
+  border-width: 3px;
+}
+
+.input-editing:focus-visible {
+  outline: none;
 }
 
 .form-modal {
@@ -94,6 +108,24 @@ tr::nth-child(odd) {
   height: 40px;
   font-size: 20px;
   padding: 0px;
+  border: none;
+  border-bottom: 2px solid #00BF80;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.form-modal__input:hover {
+  outline: none;
+  border-width: 3px;
+}
+
+.form-modal__input:focus {
+  color: red;
+  background-color: rgba(33, 169, 255, 0.1);
+}
+
+.form-modal__input:focus-visible {
+  outline: none;
 }
 
 .form-modal__text {
@@ -123,6 +155,7 @@ body {
   font-family: 'Roboto', sans-serif;
   padding-left: 200px;
   padding-right: 200px;
+  margin: 0;
 }
 
 .button-add-td {
@@ -142,4 +175,3 @@ body {
 #chart_div {
   margin-top: 30px;
 }
-/*# sourceMappingURL=style.css.map */

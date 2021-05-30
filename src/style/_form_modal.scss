@@ -1,4 +1,6 @@
 $size-form: 350px;
+$main-color: #00BF80;
+
 .form-modal {
   font-size: 17px;
   position: fixed;
@@ -17,6 +19,7 @@ $size-form: 350px;
 
 
   $size-close: 40px;
+
   &__close {
     position: absolute;
     display: block;
@@ -43,6 +46,24 @@ $size-form: 350px;
     height: 40px;
     font-size: 20px;
     padding: 0px;
+    border: none;
+    border-bottom: 2px solid $main-color;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+
+  &__input:hover {
+    outline: none;
+    border-width: 3px;
+  }
+
+  &__input:focus {
+    color: red;
+    background-color: rgba(33, 169, 255, .1);
+  }
+
+  &__input:focus-visible {
+    outline: none;
   }
 
   &__text {
@@ -57,8 +78,9 @@ $size-form: 350px;
     padding: 0px;
     border-width: 1px;
   }
+
   &__submit:hover {
-    background-color: #00BF80;
+    background-color: $main-color;
     color: white;
     transition-duration: .2s;
   }

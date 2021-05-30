@@ -1,33 +1,58 @@
-google.charts.load('current', { packages: ['line', 'corechart'] });
-google.charts.setOnLoadCallback(drawChart);
-
-function drawChart() {
-  var chartDiv = document.getElementById('chart_div');
-  var data = new google.visualization.DataTable();
-  data.addColumn('date', 'Время');
-  data.addColumn('number', 'Стоимость');
-  data.addRows(bruteDate());
-  var option = {
-    chart: {
-      title: 'График изменений роста ценнных бумаг',
+const data = {
+  datasets: [
+    {
+      label: 'График изменений цен',
+      backgroundColor: '#00BF80',
+      borderColor: '#00BF80',
+      data: bruteDate(),
     },
-    legend: { position: 'bottom' },
-  };
-  var chart = new google.charts.Line(chartDiv);
-  chart.draw(data, option);
-}
+  ],
+};
+const config = {
+  type: 'line',
+  data,
+  options: {
+    aspectRatio: 3,
+    plugins: {
+      title: {
+        display: true,
+        text: 'График изменения цен',
+        font: {
+          size: 26,
+          weight: 'normal',
+          family: "'Roboto', sans-serif",
+        },
+        padding: {
+          top: 40,
+          bottom: 30,
+        },
+      },
+      legend: {
+        display: false,
+      },
+    },
+  },
+};
+
+var myChart = new Chart(document.getElementById('myChart'), config);
+
 function bruteDate() {
   const render = [];
   const dataTD = document.querySelectorAll('td:nth-of-type(1)');
   dataTD.forEach(elem => {
-    let arr = [];
-    let time = elem.textContent.split('.').reverse().join('.');
-    arr.push(new Date(time));
+    let arr = {};
+    arr.x = elem.textContent.split('.').reverse().join('.');
     render.push(arr);
   });
   const textTD = document.querySelectorAll('td:nth-of-type(3)');
   textTD.forEach((elem, index) => {
-    render[index].push(Number(elem.textContent));
+    render[index].y = Number(elem.textContent);
   });
   return render;
+}
+function addData(obj) {
+  if (obj === undefined) {
+     myChart.data.datasets[0].data = bruteDate();
+  } else myChart.data.datasets[0].data.push(obj);
+  myChart.update();
 }
