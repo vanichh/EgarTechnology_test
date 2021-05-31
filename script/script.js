@@ -14,6 +14,7 @@ function editing(event) {
     const input = document.createElement('input');
     input.classList.add('input-editing');
     input.addEventListener('keyup', acceptanceChanges);
+    // устанваливаем инпуты при редактировании
     if (event.target.cellIndex === 0) {
       input.setAttribute('type', 'date');
       input.value = event.target.textContent.split('.').reverse().join('-');
@@ -28,6 +29,7 @@ function editing(event) {
     }
     applyingСhanges();
     event.target.textContent = '';
+    // добавляем по кнопке или отменяем редактирование инпута
     event.target.append(input);
     function acceptanceChanges(eve) {
       if (eve.key === 'Enter') {
@@ -39,7 +41,7 @@ function editing(event) {
   }
   return false;
 }
-
+// переводим все инпуты из таблицы в текст
 function applyingСhanges() {
   const td = document.querySelectorAll('.table td');
   td.forEach((elem, index) => {
@@ -48,7 +50,10 @@ function applyingСhanges() {
       else elem.textContent = elem.lastChild.value;
     }
   });
+  addData();
 }
+
+// запускаем модальное окно
 document.querySelector('button').addEventListener('click', () => {
   form.style.display = 'flex';
   applyingСhanges();
@@ -56,8 +61,9 @@ document.querySelector('button').addEventListener('click', () => {
 
 form.addEventListener('submit', submitting);
 function submitting(event) {
-  const obj = {};
+  const obj = {}; // создаем объект для отрисовки графика
   event.preventDefault();
+  // собираем данные с инпута и добавляем в таблицу
   const inputValue = document.querySelectorAll(
       'input:not(.form-modal__submit)'
     ),

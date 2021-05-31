@@ -36,7 +36,7 @@ const config = {
 };
 
 var myChart = new Chart(document.getElementById('myChart'), config);
-
+// создаения объекта для отрисовки графика 
 function bruteDate() {
   const render = [];
   const dataTD = document.querySelectorAll('td:nth-of-type(1)');

@@ -1,3 +1,5 @@
+// Модальное окно
+
 const formModal = document.querySelector('.form-modal');
 formModal.addEventListener('mousedown', DragDragnDrop);
 function DragDragnDrop(event) {
@@ -15,3 +17,7 @@ function DragDragnDrop(event) {
     formModal.style.cursor = 'auto';
   };
 }
+
+// Таблица
+
+
