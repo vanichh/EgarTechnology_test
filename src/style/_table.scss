@@ -34,6 +34,14 @@ td {
   padding: 0 20px;
 }
 
+@media(max-width: 650px) {
+  th,
+  td {
+    padding: 10px 0;
+    line-height: 40px;
+  }
+}
+
 td:hover {
   font-weight: bold;
 }
@@ -55,6 +63,7 @@ tr::nth-child(odd) {
   border-bottom: 2px solid $main-color;
   box-sizing: border-box;
   background-color: transparent;
+  padding: 0;
 }
 
 .input-editing:hover {
