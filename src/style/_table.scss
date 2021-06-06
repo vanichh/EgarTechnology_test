@@ -17,6 +17,12 @@ $main-color: #00BF80;
     font-size: 20px;
     border: 1px solid grey;
   }
+
+  @media(max-width: 650px) {
+    &__thead {
+      font-size: 18px;
+    }
+  }
 }
 
 
@@ -35,6 +41,7 @@ td {
 }
 
 @media(max-width: 650px) {
+
   th,
   td {
     padding: 10px 0;
@@ -64,7 +71,31 @@ tr::nth-child(odd) {
   box-sizing: border-box;
   background-color: transparent;
   padding: 0;
+  font-family: 'Roboto',
+    sans-serif;
 }
+
+.input-editing::-webkit-calendar-picker-indicator {
+  padding: 0;
+  margin: 0;
+}
+
+@media(max-width: 650px) {
+  .input-editing::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+}
+
+.input-editing::-webkit-datetime-edit-fields-wrapper {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.input-editing::-webkit-inner-spin-button {
+  display: none;
+}
+
+
 
 .input-editing:hover {
 

@@ -18,6 +18,12 @@
   border: 1px solid grey;
 }
 
+@media (max-width: 650px) {
+  .table__thead {
+    font-size: 18px;
+  }
+}
+
 th {
   padding: 20px;
   text-align: center;
@@ -62,6 +68,26 @@ tr::nth-child(odd) {
   box-sizing: border-box;
   background-color: transparent;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.input-editing::-webkit-calendar-picker-indicator {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 650px) {
+  .input-editing::-webkit-calendar-picker-indicator {
+    display: none;
+  }
+}
+
+.input-editing::-webkit-datetime-edit-fields-wrapper {
+  font-family: 'Roboto', sans-serif;
+}
+
+.input-editing::-webkit-inner-spin-button {
+  display: none;
 }
 
 .input-editing:hover {
@@ -90,6 +116,15 @@ tr::nth-child(odd) {
   box-shadow: 0 0 3px 3px rgba(34, 60, 80, 0.2);
 }
 
+@media (max-width: 650px) {
+  .form-modal {
+    top: calc(50% - ((300px + 40px) / 2));
+    left: calc(50% - ((300px + 40px) / 2));
+    width: 300px;
+    height: 300px;
+  }
+}
+
 .form-modal__close {
   position: absolute;
   display: block;
@@ -112,6 +147,7 @@ tr::nth-child(odd) {
 }
 
 .form-modal__input {
+  width: 100%;
   display: block;
   height: 40px;
   font-size: 20px;
@@ -120,6 +156,15 @@ tr::nth-child(odd) {
   border-bottom: 2px solid #00BF80;
   box-sizing: border-box;
   background-color: transparent;
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-modal__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.form-modal__input::-webkit-datetime-edit-fields-wrapper {
+  font-family: 'Roboto', sans-serif;
 }
 
 .form-modal__input:hover {
@@ -153,6 +198,16 @@ tr::nth-child(odd) {
   background-color: #00BF80;
   color: white;
   transition-duration: .2s;
+}
+
+.hoverArea {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 350px;
+  border-left: 5px solid #00BF80;
+  border-top: 5px solid #00BF80;
 }
 
 body {

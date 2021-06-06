@@ -1,4 +1,5 @@
 $size-form: 350px;
+$size-form-min: 300px;
 $main-color: #00BF80;
 
 .form-modal {
@@ -17,6 +18,13 @@ $main-color: #00BF80;
   justify-content: center;
   box-shadow: 0 0 3px 3px rgba(34, 60, 80, 0.2);
 
+  @media(max-width: 650px) {
+
+    top: calc(50% - ((#{$size-form-min} + 40px) / 2));
+    left: calc(50% - ((#{$size-form-min} + 40px) / 2));
+    width: $size-form-min;
+    height: $size-form-min;
+  }
 
   $size-close: 40px;
 
@@ -42,6 +50,7 @@ $main-color: #00BF80;
   }
 
   &__input {
+    width: 100%;
     display: block;
     height: 40px;
     font-size: 20px;
@@ -50,7 +59,19 @@ $main-color: #00BF80;
     border-bottom: 2px solid $main-color;
     box-sizing: border-box;
     background-color: transparent;
+    font-family: 'Roboto',
+      sans-serif;
   }
+
+  &__input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &__input::-webkit-datetime-edit-fields-wrapper {
+    font-family: 'Roboto',
+      sans-serif;
+  }
+
 
   &__input:hover {
     outline: none;
@@ -84,4 +105,14 @@ $main-color: #00BF80;
     color: white;
     transition-duration: .2s;
   }
+}
+
+.hoverArea {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $size-form;
+  height: $size-form;
+  border-left: 5px solid $main-color;
+  border-top: 5px solid $main-color;
 }
